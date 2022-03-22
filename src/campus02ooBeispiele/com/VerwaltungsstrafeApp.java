@@ -15,13 +15,18 @@ erste.strafe=0;
 
 erste.strafeBerechnen(60);
 System.out.println(erste.name + " " +erste.nachname + " ,Kennezeichnen:" + erste.kennzeichnen+ ", hat eine Strafe von Anzahl " +erste.anzahl+ " und muss  "+erste.strafe+ " zahlen" );
-erste.strafeBerechnen(34);
+
+erste.strafeBerechnen(34); //ovo ne radi, ne nadovezuje se na prvi
         System.out.println(erste.name + " " +erste.nachname + " ,Kennezeichnen:" + erste.kennzeichnen+ ", hat " +erste.anzahl+ " Strafe und muss  "+erste.strafe+ " zahlen" );
+
 erste.verbandsPaket();
 System.out.println(erste.name + " " +erste.nachname + " ,Kennezeichnen:" + erste.kennzeichnen+ ", hat " +erste.anzahl+ " Strafe und muss  "+erste.strafe+ " zahlen" );
 
-erste.alkohol(4.0);
+erste.alkohol(0.6);  // ich erwarte heir 150 aber bekomme wwieder 100
         System.out.println(erste.name + " " +erste.nachname + " ,Kennezeichnen:" + erste.kennzeichnen+ ", hat " +erste.anzahl+ " Strafe und muss  "+erste.strafe+ " zahlen" );
 
+
+        erste.sonstiges(10);
+        System.out.println(erste.name + " " +erste.nachname + " ,Kennezeichnen:" + erste.kennzeichnen+ ", hat " +erste.anzahl+ " Strafe und muss  "+erste.strafe+ " zahlen" );
     }
 }

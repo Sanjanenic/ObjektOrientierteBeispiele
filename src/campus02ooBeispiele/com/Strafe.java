@@ -43,7 +43,7 @@ public class Strafe {
 
         public void alkohol(double wert){
 
-        if(wert>=0.5 && wert<1){
+        if(wert>=0.5 && wert<1.0){
             strafe=+100;
         }
         else if(wert>=1.0 && wert<2.0){
@@ -57,6 +57,22 @@ public class Strafe {
         }
        anzahl=+2;
         }
+    public void sonstiges(double wert){
+        strafe=strafe+wert;
+        anzahl=+1;
+    }
+
+    public double getStrafe(){
+
+if(strafnummer==1){
+    strafe=strafe*(10/100);
+}
+
+
+
+return strafe;
+    }
+
 
 
 
