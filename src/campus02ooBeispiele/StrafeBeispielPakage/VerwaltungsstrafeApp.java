@@ -1,4 +1,4 @@
-package campus02ooBeispiele.com;
+package campus02ooBeispiele.StrafeBeispielPakage;
 
 public class VerwaltungsstrafeApp {
     public static void main(String[] args) {
