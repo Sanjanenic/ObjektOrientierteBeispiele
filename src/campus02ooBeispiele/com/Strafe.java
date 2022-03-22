@@ -17,20 +17,20 @@ public class Strafe {
                     anzahl=anzahl+1;
                 }
                 else if(geschwindigkeitsUeberschreitung>20 && geschwindigkeitsUeberschreitung<=30){
-                    strafe=+50;
-                    anzahl=+1;
+                    strafe+=50;
+                    anzahl+=1;
                 }
                 else if(geschwindigkeitsUeberschreitung>30 && geschwindigkeitsUeberschreitung<=50){
-                    strafe=+100;
-                    anzahl=+1;
+                    strafe+=100;
+                    anzahl+=1;
                 }
                 else if (geschwindigkeitsUeberschreitung>50 && geschwindigkeitsUeberschreitung<=100){
-                    strafe=+500;
-                    anzahl=+1;
+                    strafe+=500;
+                    anzahl+=1;
                 }
                 else{
-                    strafe=+1500;
-                    anzahl=+1;
+                    strafe+=1500;
+                    anzahl+=1;
                 }
 
             }
@@ -44,33 +44,42 @@ public class Strafe {
         public void alkohol(double wert){
 
         if(wert>=0.5 && wert<1.0){
-            strafe=+100;
+            strafe+=100;
         }
         else if(wert>=1.0 && wert<2.0){
-            strafe=+400;
+            strafe+=400;
         }
         else if (wert>=2.0 && wert<3.0){
-            strafe=+1000;
+            strafe+=1000;
         }
          else {
-            strafe=+5000;
+            strafe+=5000;
         }
-       anzahl=+2;
+       anzahl+=2;
         }
     public void sonstiges(double wert){
         strafe=strafe+wert;
-        anzahl=+1;
+        anzahl+=1;
     }
 
     public double getStrafe(){
+ double strafeReduziert=0;
 
-if(strafnummer==1){
-    strafe=strafe*(10/100);
+if(anzahl==1){
+    strafeReduziert=strafe - (strafe*(30.0/100));
+}
+else if(anzahl==2){
+    strafeReduziert=strafe - (strafe*(20.0/100));  //muss ich 20.0 schreiben statt 20 weil
+}
+else if(anzahl==3){
+
+    strafeReduziert=strafe - (strafe*(10.0/100));
+}
+else if(anzahl>=4){
+    strafeReduziert=strafe;
 }
 
-
-
-return strafe;
+return strafeReduziert;
     }
 
 
